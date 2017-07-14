@@ -32,7 +32,7 @@ energy$Date_time <- strptime(paste(energy$Date, energy$Time),
 energy <- energy[, c(10, seq(3, 9, by = 1))]
 
 ## Plotting
-png(filename = "plot3.png")
+png(filename = "plot3.png", width = 480, height = 480, units = "px")
 with(energy, {
       plot(Date_time, Sub_metering_1, type = "n", xlab = "", 
            ylab = "Energy sub metering")

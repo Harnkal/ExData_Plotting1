@@ -32,7 +32,7 @@ energy$Date_time <- strptime(paste(energy$Date, energy$Time),
 energy <- energy[, c(10, seq(3, 9, by = 1))]
 
 ## Plotting
-png(filename = "plot2.png")
+png(filename = "plot2.png", width = 480, height = 480, units = "px")
 plot(energy$Date_time, energy$Global_active_power,type = "n",
      xlab = "", ylab = "Global Active Power (kilowatts)")
 lines(energy$Date_time, energy$Global_active_power)

@@ -32,7 +32,7 @@ energy$Date_time <- strptime(paste(energy$Date, energy$Time),
 energy <- energy[, c(10, seq(3, 9, by = 1))]
 
 ## Plotting
-png(filename = "plot1.png")
+png(filename = "plot1.png", width = 480, height = 480, units = "px")
 hist(energy$Global_active_power, 
      col = "red", main = "Global Active Power", 
      xlab = "Global Active Power (kilowatts)")

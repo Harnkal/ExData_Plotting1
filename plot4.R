@@ -33,7 +33,7 @@ energy$Date_time <- strptime(paste(energy$Date, energy$Time),
 energy <- energy[, c(10, seq(3, 9, by = 1))]
 
 ## Plotting
-png(filename = "plot4.png")
+png(filename = "plot4.png", width = 480, height = 480, units = "px")
 par(mfrow = c(2, 2))
 ### first graph
 with(energy, {
@@ -61,6 +61,6 @@ with(energy, {
 with(energy, {
       plot(Date_time, Global_reactive_power, type = "n", xlab = "datetime",
            ylab = "Global_reactive_power")
-      lines(Date_time, Global_reactive_power, alpha = 0.5)
+      lines(Date_time, Global_reactive_power)
 })
 dev.off()
